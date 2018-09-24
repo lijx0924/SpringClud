@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.ljx</groupId>
-	<artifactId>service-ribbon</artifactId>
+	<artifactId>service-feign</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>service-ribbon</name>
+	<name>service-feign</name>
 	<description>Demo project for Spring Boot</description>
 
 	<parent>
@@ -16,7 +16,6 @@
 		<artifactId>SpringCloud</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
@@ -24,12 +23,9 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
+			<artifactId>spring-cloud-starter-openfeign</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
-		</dependency>
+
 	</dependencies>
 
 </project>
