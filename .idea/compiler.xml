@@ -7,6 +7,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="config-server" />
+        <module name="consul-client" />
+        <module name="consul-consumer" />
         <module name="eureka-server" />
         <module name="service-client" />
         <module name="service-feign" />
@@ -16,6 +18,8 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="config-server" target="1.8" />
+      <module name="consul-client" target="1.8" />
+      <module name="consul-consumer" target="1.8" />
       <module name="eureka-server" target="1.8" />
       <module name="service-client" target="1.8" />
       <module name="service-feign" target="1.8" />

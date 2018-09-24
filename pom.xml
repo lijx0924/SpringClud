@@ -25,6 +25,8 @@
         <module>service-feign</module>
         <module>service-zuul</module>
         <module>config-server</module>
+        <module>consul-client</module>
+        <module>consul-consumer</module>
     </modules>
 
     <properties>
@@ -39,6 +41,10 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
     </dependencies>
 

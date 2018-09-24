@@ -1,0 +1,11 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: consul-consumer
+  cloud:
+    consul:
+      host: localhost
+      prot: 8500
+logging:
+  file: ${spring.application.name}.log
