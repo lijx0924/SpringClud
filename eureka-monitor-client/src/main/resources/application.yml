@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: eureka-monitor-client
+
+server:
+  port: 8768
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka/,http://127.0.0.1:8762/eureka/,http://127.0.0.1:8763/eureka/
+turbine:
+  aggregator:
+    clusterConfig: default
+  app-config: eureka-ribbon-client,eureka-feign-client
+  cluster-name-expression: new String("default")
+  combine-host-port: true

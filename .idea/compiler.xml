@@ -9,22 +9,26 @@
         <module name="config-server" />
         <module name="consul-client" />
         <module name="consul-consumer" />
+        <module name="eureka-client" />
+        <module name="eureka-feign-client" />
+        <module name="eureka-invocation" />
+        <module name="eureka-monitor-client" />
+        <module name="eureka-ribbon-client" />
         <module name="eureka-server" />
-        <module name="service-client" />
-        <module name="service-feign" />
-        <module name="service-ribbon" />
-        <module name="service-zuul" />
+        <module name="eureka-zuul" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="config-server" target="1.8" />
       <module name="consul-client" target="1.8" />
       <module name="consul-consumer" target="1.8" />
+      <module name="eureka-client" target="1.8" />
+      <module name="eureka-feign-client" target="1.8" />
+      <module name="eureka-invocation" target="1.8" />
+      <module name="eureka-monitor-client" target="1.8" />
+      <module name="eureka-ribbon-client" target="1.8" />
       <module name="eureka-server" target="1.8" />
-      <module name="service-client" target="1.8" />
-      <module name="service-feign" target="1.8" />
-      <module name="service-ribbon" target="1.8" />
-      <module name="service-zuul" target="1.8" />
+      <module name="eureka-zuul" target="1.8" />
       <module name="SpringClud" target="1.8" />
     </bytecodeTargetLevel>
   </component>

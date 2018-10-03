@@ -14,26 +14,26 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.0.5.RELEASE</version>
+        <version>1.5.9.RELEASE</version>
         <relativePath/>
     </parent>
 
     <modules>
         <module>eureka-server</module>
-        <module>service-client</module>
-        <module>service-ribbon</module>
-        <module>service-feign</module>
-        <module>service-zuul</module>
+        <module>eureka-client</module>
+        <module>eureka-ribbon-client</module>
+        <module>eureka-feign-client</module>
+        <module>eureka-zuul</module>
         <module>config-server</module>
-        <module>consul-client</module>
-        <module>consul-consumer</module>
+        <module>eureka-invocation</module>
+        <module>eureka-monitor-client</module>
     </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
-        <spring-cloud.version>Finchley.RELEASE</spring-cloud.version>
+        <spring-cloud.version>Dalston.SR4</spring-cloud.version>
     </properties>
 
     <dependencies>
@@ -46,8 +46,17 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-eureka-server</artifactId>
+        </dependency>
     </dependencies>
 
+    <!-- 非继承方式引入maven依赖 -->
     <dependencyManagement>
         <dependencies>
             <dependency>
