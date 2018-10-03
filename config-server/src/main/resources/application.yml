@@ -1,19 +1,15 @@
 spring:
+  application:
+    name: config-server
   cloud:
     config:
       server:
-       # native:
-        #  search-locations: classpath:/shared
+        native:
+          search-locations: classpath:/native
         git:
           uri: https://github.com/lijx0924/SpringClud.git
-          search-paths: respo
-          username:
-          password:
-      label: master
-  #profiles:
-   # active: native
-  application:
-    name: config-server
-
+          search-paths: config-repo
+          username: lijx0924@aliyun.com
+          password: ljx123456789
 server:
-  port: 8769
+  port: 8888
