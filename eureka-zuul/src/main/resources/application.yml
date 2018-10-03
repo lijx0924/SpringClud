@@ -1,18 +1,30 @@
 server:
-  port: 5555
+  port: 5000
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:1111/eureka/
+      defaultZone: http://127.0.0.1:8761/eureka/,http://127.0.0.1:8762/eureka/,http://127.0.0.1:8763/eureka/
 
 spring:
   application:
     name: service-zuul
 zuul:
   routes:
-    api-a:
-      path: /api-a/**
-      serviceId: service-ribbon
-    api-b:
-      path: /api-b/**
-      serviceId: service-feign
+    hiapi:
+      path: /hiapi/**
+      serviceId: eureka-client
+     # serviceId: eureka-client-v1
+    ribbonapi:
+      path: /ribbonapi/**
+      serviceId: eureka-ribbon-client
+    feignapi:
+      path: /feignapi/**
+      serviceId: eureka-feign-client
+    #prefix: /v1
+  #ribbon:
+ # eager-load:
+  #  enabled: false
+
+#eureka-client-v1:
+ # ribbon:
+  #  listOfServers:  http://127.0.0.1:8764, http://127.0.0.1:8765
