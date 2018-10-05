@@ -27,6 +27,10 @@
         <module>config-server</module>
         <module>eureka-invocation</module>
         <module>eureka-monitor-client</module>
+        <module>zipkin-server</module>
+        <module>user-service</module>
+        <module>gateway-service</module>
+        <module>admin-server</module>
     </modules>
 
     <properties>

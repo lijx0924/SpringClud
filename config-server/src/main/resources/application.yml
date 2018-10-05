@@ -1,6 +1,6 @@
+server:
+  port: 8888
 spring:
-  application:
-    name: config-server
   cloud:
     config:
       server:
@@ -11,10 +11,22 @@ spring:
           search-paths: config-repo
           username: lijx0924@aliyun.com
           password: ljx123456789
+      label: master
+  application:
+    name: config-server
 eureka:
   client:
     service-url:
       defaultZone: http://127.0.0.1:8761/eureka/,http://127.0.0.1:8762/eureka/,http://127.0.0.1:8763/eureka/
 
-server:
-  port: 8888
+
+#spring:
+#  cloud:
+#    config:
+#      server:
+#        native:
+#          search-locations: classpath:/native
+#  profiles:
+#     active: native
+#  application:
+#    name: config-server

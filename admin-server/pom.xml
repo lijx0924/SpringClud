@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.ljx</groupId>
-	<artifactId>eureka-server</artifactId>
+	<artifactId>admin-server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>eureka-server</name>
+	<name>admin-server</name>
 	<description>Demo project for Spring Boot</description>
 
 	<parent>
@@ -16,17 +16,25 @@
 		<artifactId>SpringCloud</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
+
+
 	<dependencies>
+		<!-- https://mvnrepository.com/artifact/de.codecentric/spring-boot-admin-starter-server -->
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
+			<groupId>de.codecentric</groupId>
+			<artifactId>spring-boot-admin-starter-server</artifactId>
+			<version>1.5.1</version>
 		</dependency>
-		<!-- 用于服务注入验证 -->
-		<!--<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-security</artifactId>
-		</dependency>-->
+		<!--spring cloud admin server ui-->
+		<dependency>
+			<groupId>de.codecentric</groupId>
+			<artifactId>spring-boot-admin-server-ui</artifactId>
+			<version>1.5.4</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jolokia</groupId>
+			<artifactId>jolokia-core</artifactId>
+		</dependency>
 
 	</dependencies>
-
 </project>

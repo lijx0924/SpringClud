@@ -1,3 +1,5 @@
+server:
+  port: 8770
 spring:
   application:
     name: config-client
@@ -8,14 +10,29 @@ spring:
       discovery:
         enabled: true
         service-id: config-server
+      label: master
   profiles:
-    active: dev
+    active: dev #仓库中对应文件的环境，如dev、prod、test等
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    publisher-confirms: true
+    virtual-host: /
 
 eureka:
   client:
     service-url:
       defaultZone: http://127.0.0.1:8761/eureka/,http://127.0.0.1:8762/eureka/,http://127.0.0.1:8763/eureka/
 
-server:
-  port: 8770
+
+management:
+  security:
+    enabled: false    #刷新时关闭安全认证
+
+
+
+
 
