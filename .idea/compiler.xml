@@ -18,6 +18,8 @@
         <module name="eureka-server" />
         <module name="eureka-zuul" />
         <module name="gateway-service" />
+        <module name="service-auth" />
+        <module name="springboot-security" />
         <module name="user-service" />
         <module name="zipkin-server" />
       </profile>
@@ -37,10 +39,17 @@
       <module name="eureka-server" target="1.8" />
       <module name="eureka-zuul" target="1.8" />
       <module name="gateway-service" target="1.8" />
+      <module name="service-auth" target="1.8" />
+      <module name="springboot-security" target="1.8" />
       <module name="SpringCloud" target="1.8" />
       <module name="SpringClud" target="1.8" />
       <module name="user-service" target="1.8" />
       <module name="zipkin-server" target="1.8" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="service-auth" options="" />
+    </option>
   </component>
 </project>

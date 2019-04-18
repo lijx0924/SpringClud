@@ -30,6 +30,8 @@
         <module>zipkin-server</module>
         <module>user-service</module>
         <module>gateway-service</module>
+        <module>springboot-security</module>
+        <module>service-auth</module>
     </modules>
 
     <properties>
